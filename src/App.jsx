@@ -17,9 +17,13 @@ export const App = () => {
   // DON'T change the code below
   const increase = () => {
     setCount(prev => {
-      const afterOne = prev + 1;
+      let afterOne = prev + 1;
 
-      return afterOne % 5 === 0 ? afterOne + 100 : afterOne;
+      if (afterOne % 5 === 0) {
+        afterOne += 100;
+      }
+
+      return afterOne;
     });
   };
 
