@@ -16,15 +16,11 @@ export const App = () => {
 
   // DON'T change the code below
   const increase = () => {
-    setCount(prev => {
-      let afterOne = prev + 1;
+    if (count % 5 === 0) {
+      add100();
+    }
 
-      if (afterOne % 5 === 0) {
-        afterOne += 100;
-      }
-
-      return afterOne;
-    });
+    addOne();
   };
 
   return (
